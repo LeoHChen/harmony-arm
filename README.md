@@ -9,11 +9,6 @@ sudo yum install glibc-static gmp-devel gmp-static openssl-libs openssl-static g
 ```
 * download harmony git repos
 ```bash
-mkdir -p $(go env GOPATH)/src/github.com/ethereum
-cd $(go env GOPATH)/src/github.com/ethereum
-
-git clone https://github.com/harmony-one/go-ethereum.git
-
 mkdir -p $(go env GOPATH)/src/github.com/harmony-one
 cd $(go env GOPATH)/src/github.com/harmony-one
 
@@ -22,7 +17,7 @@ git clone https://github.com/harmony-one/bls.git
 git clone https://github.com/harmony-one/harmony.git
 
 cd harmony
-make arm_static
+make linux_static
 ```
 
 ## Screenshot
