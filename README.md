@@ -6,7 +6,7 @@ Harmony On ARM64. It was tested on c6g instance on AWS, and Raspberry Pi4.
 * launch m6g/c6g instance; ssh into the instance
 * install build tools
 ```bash
-sudo apt install glibc-static gmp-devel gmp-static openssl-libs openssl-static gcc-c++
+sudo yum install glibc-static gmp-devel gmp-static openssl-libs openssl-static gcc-c++
 ```
 
 ### Raspberry Pi4
@@ -15,7 +15,8 @@ sudo apt install glibc-static gmp-devel gmp-static openssl-libs openssl-static g
 * install build tools
 
 ```bash
-sudo yum install glibc-static gmp-devel gmp-static openssl-libs openssl-static gcc-c++
+sudo apt-get update
+sudo apt install libgpm-dev libssl-dev curl git jq make gcc g++ bash psmisc dnsutils
 ```
 
 ### Download Harmony Repos
