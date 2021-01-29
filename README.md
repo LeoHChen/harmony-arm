@@ -1,12 +1,24 @@
 # harmony-arm
-Harmony On ARM64. It was tested on c6g instance on AWS.
+Harmony On ARM64. It was tested on c6g instance on AWS, and Raspberry Pi4.
 
 ## Quickstart
+### AWS c6g
 * launch m6g/c6g instance; ssh into the instance
 * install build tools
 ```bash
+sudo apt install glibc-static gmp-devel gmp-static openssl-libs openssl-static gcc-c++
+```
+
+### Raspberry Pi4
+* install ubuntu arm64 on Raspberry Pi4
+https://ubuntu.com/tutorials/how-to-install-ubuntu-desktop-on-raspberry-pi-4#1-overview
+* install build tools
+
+```bash
 sudo yum install glibc-static gmp-devel gmp-static openssl-libs openssl-static gcc-c++
 ```
+
+### Download Harmony Repos
 * download harmony git repos
 ```bash
 mkdir -p $(go env GOPATH)/src/github.com/harmony-one
@@ -15,7 +27,10 @@ cd $(go env GOPATH)/src/github.com/harmony-one
 git clone https://github.com/harmony-one/mcl.git
 git clone https://github.com/harmony-one/bls.git
 git clone https://github.com/harmony-one/harmony.git
+```
 
+### Build ARM64 binary
+```bash
 cd harmony
 make linux_static
 ```
