@@ -10,8 +10,8 @@ sudo apt install glibc-static gmp-devel gmp-static openssl-libs openssl-static g
 ```
 
 ### Raspberry Pi4
-* install ubuntu arm64 on Raspberry Pi4
-https://ubuntu.com/tutorials/how-to-install-ubuntu-desktop-on-raspberry-pi-4#1-overview
+* install [Ubuntu arm64](https://ubuntu.com/tutorials/how-to-install-ubuntu-desktop-on-raspberry-pi-4#1-overview) on Raspberry Pi4
+
 * install build tools
 
 ```bash
